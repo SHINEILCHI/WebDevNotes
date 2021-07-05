@@ -1,0 +1,40 @@
+Operators:
+  • === is EQUAL to
+  • !== is NOT EQUAL to
+  • > is GREATER THAN
+  • < is LESS THAN
+  • >= is GREATER THAN OR EQUAL to
+  • <= is LESS THAN OR EQUAL to
+  • && AND
+  • || OR
+  • ! NOT
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Key difference between (== or double equal) and (=== or triple equal):
+  Double Equal - doesn't care about the data type
+  Triple Equal - includes the data type checking
+
+For example:
+  a = 1; - number data type
+  b = "1"; - string data type
+
+  Double Equal to:
+  if (a == b) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
+
+Output:
+    yes - because "double equal to" doesn't check the data type, only the value
+
+Wherein the Triple Equal to:
+  if (a === b) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
+
+Output:
+  no - because even if they have the same value, the "a" variable is a "number" data type while the "b" variable is a "string" data type

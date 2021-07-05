@@ -1,0 +1,17 @@
+Web Design Principles:
+  1. Color Theory
+
+    Be aware of:
+      *Moods
+
+  2. Typography
+
+  3. User Interface Design
+    Preferably:
+      - 40-60 characters per line of text
+      - Reduce alignment points
+
+  4. User Experience Design
+    - simplicity
+    - consistency, use F-Layout or Z-Layout
+    - should be all platform design, mobile responsive

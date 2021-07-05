@@ -1,0 +1,137 @@
+jQuery:
+  - is a JavaScript library
+  - one of the main reason why this library was created was to simplify and shorten the complex written code that JavaScript have.
+
+  For example:
+
+    JavaScript code:
+      document.querySelector("button")
+
+    This translates to...
+
+    jQuery code:
+      $("button")
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Embedding jQuery in your HTML file:
+
+  Note:
+  - when getting the link to embed jQuery, use the Google CDN as it is the most popular link. This basically helps your users to access your website
+  much faster
+  - always put the CDN link above your JavaScript link src, if not, it can cause you a lot of trouble
+
+  For example:
+
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>jQuery</title>
+      </head>
+      <body>
+        <h1>Hello.</h1>
+        <button>Click Me</button>
+        <button>Click Me</button>
+        <button>Click Me</button>
+        <button>Click Me</button>
+        <button>Click Me</button>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="index.js" charset="utf-8"></script>
+      </body>
+    </html>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to add/remove classes using jQuery:
+
+How to select an element using jQuery:
+  $("button") - in jQuery, this will select ALL of the element that has the "button" selector, there is no difference between one or many
+
+
+How to "add" a CSS class using jQuery:
+
+  styles.css:
+  .big-title {
+    font-size: 10rem;
+  }
+
+How to add "multiple" CSS class using jQuery:
+  - just use "space" for adding multiple classes
+
+  For example:
+    $("h1").addClass("big-title"); - single class
+
+    $("h1").addClass("big-title title-margin") - multiple class
+
+How to "remove" a class using jQuery:
+  $("h1").removeClass("big-title") - remove single class
+
+  $("h1").removeClass("big-title title-margin"); - remove multiple class
+
+  Note: use "space" for removing multiple classes
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to check if a selected element has a certain class using jQuery:
+  $("h1").hasClass("title-margin"); - if "title-margin" class is available in this element(h1), this will return "true", returns a boolean value
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Two ways to manipulate text using jQuery:
+  1. Using the text method - this manipulates the text plainly
+
+  For example:
+    $("h1").text("Hello");
+
+  2. Using the html method - this gives us the ability to write an html tag
+    $("h1").html("<em>Hello</em>");
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+How to get & set the value of an attribute using jQuery:
+  Get:
+    $("img").attr("src"); - this returns the value of the "src" attribute of the "img" element
+
+  Set:
+    $("a").attr("href", "https://www.google.com"); - this sets the value of the "href" attribute of the "a" element
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Two types on how to add an "event listener" using jQuery:
+  1.
+    $("button").click(function () {
+      // write code here
+    });
+
+  2.
+    $("h1").on("mouseover", function () { - this is more flexible than the first one
+      // write code here
+    });
+
+Note:
+  - by using the above code of selecting the element, this code will look throughout the document and will select "ALL" of the mentioned element.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Two types on how to select all of the element inside the document using jQuery:
+  1. - $()
+  2. - $(document)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to add element using jQuery:
+1. before - this puts the given code BEFORE the <h1> OPENING tag
+  $("h1").before("<button>New</button>");
+
+2. after - this puts the given code AFTER the <h1> CLOSING tag
+  $("h1").after("<button>New</button>");
+
+3. prepend - this puts the given code INSIDE the <h1> tag BEFORE the value of the <h1> tag.
+  $("h1").prepend("<button>New</button>");
+
+4. append - this puts the given code INSIDE the <h1> tag AFTER the value of the <h1> tag.
+  $("h1").append("<button>New</button>");
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to remove element using jQuery:
+  $("h1").remove(); - this will remove all of the <h1> element from the document

@@ -1,0 +1,35 @@
+All about HTML:
+  - HTML is the foundation of all websites.
+  - you cannot create a website with CSS alone nor with JavaScript alone but you can create a website with HTML alone.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HTML Attribute (eg; <hr size="3">)
+  - specifies modification to the default element
+
+HTML COMMENT (eg; <!-- this is a comment -->)
+  - portions of text which are marked out to be ignored by the browser
+  - usually use for putting notes for yourself or other programmers that might look at your code
+
+BOILER PLATE
+  - a code template that you can re-use
+
+<meta name="description" content="Free Web Tutorials">
+  - the snippet of text that shows when your website is being search
+  - search engines crawl the HTML of a website and look for certain meta tags in order to know what your website is about and in order to display them
+  in their search index
+
+<i> vs <em> and <b> vs <strong>
+  - it's good practice to use <em> tag rather than the <i> tag and the <strong> tag rather than the <b> tag
+  - read mdn docs for more information about their differences
+
+<img src="test.png" alt="a test img file">
+  - it's best to use an "alt" attribute for SEO purposes
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tips:
+  - when you are using the Google Chrome browser, if you want to check the structure of an element from a website, right click your desired element
+  and click "inspect" to see the HTML structure that they are built from
+  - it's better to separate a <table> into different sections like <thead> for header, <tbody> for body, and <tfoot> for footer so that we can style
+  them differently and make them function differently because their section are separated from each other

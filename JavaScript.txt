@@ -1,0 +1,18 @@
+JavaScript:
+  - is use to make specifications of the behavior of webpages
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Math random:
+
+  var n = Math.random();
+    - this generates a random number with a 16 decimal places (for eg; 0.1234567891234567)
+    - generates any number between 0 - 0.9999999999999999
+    - essentially, it never reaches 1
+
+  How to take a whole number from Math.random():
+    For example:
+      var n = Math.random(); - outputs: 0.7234567891234567
+      n = n * 6; outputs: 4.34074073474074
+      n = Math.floor(n); outputs: 4
+    - can be scaled using this but will not output a number that is = or > 6, read MDN docs for more information

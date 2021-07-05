@@ -1,0 +1,26 @@
+Tips to learn how to code:
+  - do the 10 minute mark. Instead of trying to keep up with the phase of an online tutorial by "coding along", try to watch and understand the tutorial
+  for 10minutes and pause. After that, try to replicate what happen in your machine
+  - mark for review. If you come across a module that you find extremely hard, bookmark that module or video to watch it over again and try to
+  understand the principles or concepts that is being explained
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What to do when you're stuck?
+  - search for it, google it, stackoverflow it
+  - carefully check and try solving it on your own
+  - if the above steps are to no avail, try the steps below:
+    - ask the community
+      - when asking in the community, follow these 4 steps to receive a more accurate and fast response
+        • what did you expect
+        • what actually happened
+        • screenshot your code
+        • screenshot the debug console (if you're using one)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tips on debugging (debugging workflow, JavaScript edition):
+  - bring up the "chrome developer tools (press F12 on windows)" and look at the "console" section because this is where chrome reports an "error"
+  - bring up the "chrome developer tools (press F12 on windows)" and look at the "element" section because this is where we can see the elements and
+  attributes that is being "used" by our website. We can also see in this section the "elements or attributes" that are being "overridden"
+  

@@ -1,0 +1,18 @@
+var guestList = ["My", "JavaScript", "Notes"];
+
+console.log(guestList.includes("Notes"));
+  - the function "includes" finds out a particular item in an array, if it has that item, it'll return "true" otherwise it'll return "false"
+  - finding value inside the array using the "includes" function is "case-sensitive"
+
+guestList.push("Test");
+  - the function "push" adds a value into the array (it always adds at the end of the current array)
+
+  Output of the above code:
+    - ["My", "JavaScript", "Notes", "Test"]
+
+
+guestList.pop("Test");
+  - the function "pop" removes/deletes the last index/item from the array
+
+  Output of the above code:
+    - ["My", "JavaScript", "Notes"]

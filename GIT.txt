@@ -1,0 +1,77 @@
+GIT COMMANDS:
+  git init - initialize git
+  git add . - adds all file into the staging area from the working area
+  git add filename - adds a certain file into the staging area from the working area
+  git commit -m "message" - adds the staging area files into the local repository adds a name to the file, should be explicit as possible, use pressent tense wordings (For eg; Complete Chapter 1 instead of Completed Chapter 1)
+  git diff filename - checks the difference/modification of the current version of the mentioned file between the last save point in the git repository
+  git checkout filename - reverts/roll-back the current version into the last version that was committed
+  git status - checks the status of the files in working area
+  git remote -v - shows "ALL" of the "existing" remotes for the current repository
+  git remote remove "remotename (for eg; origin)" - removes the inputted remote for the current repository
+  git log - shows the information of previous commits
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GIT WITH HEROKU:
+  1 - GO TO THE PROJECT FOLDER
+  2 - type git init in the hyper terminal
+  3 - type git add . - add a new version
+  4 - type git commit -m "some message or comment"
+  5 - type git push heroku master - if your app is being deployed in heroku server
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GIT SETUP FOR ONLINE REPOSITORY:
+  1 - get the URL from the GITHUB website
+  2 - create main branch locally, taking the history from master git branch -m master main
+    ***NOTE*** - make sure to add and commit the files before adding the origin
+  3 - git remote add origin + [URL: https://USERNAME:PASSWORD@github.com/USERNAME/RepositoryName.git]
+  4 - git push -u origin main
+    ***NOTE*** - use PERSONAL GENERATED TOKENS if accessing online repositories via CLI
+    ***NOTE*** - after this, go to STEP 3 (pointing HEAD to origin/main step) of HOW TO RENAME MASTER-TO-MAIN
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HOW TO REMOVE FILES FROM STAGING AREA:
+  1 - git rm --cached -r . - this removes "ALL" of the file (as stated by the dot [.] sign) from the staging area.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HOW TO SETUP GIT IGNORE:
+  1 - touch .gitignore - *CASE SENSITIVE*, the .gitignore file should be well cased. This creates a hidden file called .gitignore
+  2 - add the filename inside the .gitignore file
+  3 - you can use wildcard to filter the files that you want to ignore.
+  For eg; *.txt - this will ignore every .txt file that you will commit
+  4 - you can use "#" sign to put comment inside the .gitignore file
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HOW TO CLONE REPOSITORY:
+  1 - git clone URL - this clones the repository of the given URL from remote repository into your local repository
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HOW TO BRANCH AND MERGE:
+  1 - git branch branchname - creates a branch
+  2 - git branch - shows you all the available branch, the one with the asterisk (*) is the one that you're currently on
+  3 - git checkout branchname - goes to the branch specified
+  4 - git merge branchname - ***NOTE - you should be in the master branch*** - this merge the file changes from the given branchname into the master
+    branch.
+    - type :q! to quit after merging
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HOW TO DELETE A BRANCH BOTH LOCALLY AND REMOTELY:
+  - delete branch locally git branch -d localBranchName
+  - delete branch remotely git push origin --delete remoteBranchName
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+HOW TO RENAME MASTER-TO-MAIN BRANCH:
+  Step 1  # create main branch locally, taking the history from master git branch -m master main
+  Step 2  # push the new local main branch to the remote repo (GitHub)  git push -u origin main
+          - changes should be added and committed first
+  Step 3 # switch the current HEAD to the main branch git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
+          - git branch -a - this shows if the HEAD is pointed unto the remote/main
+  Step 4 # change the default branch on GitHub to main # https://docs.github.com/en/github/administering-a-repository/setting-the-default-branch
+  Step 5 # delete the master branch on the remote git push origin --delete master

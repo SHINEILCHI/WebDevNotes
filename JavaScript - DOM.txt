@@ -1,0 +1,80 @@
+Dot notation:
+  - we can use Javascript to manipulate objects by using the "dot notation"
+
+  For example:
+
+  Get property:
+    - car.color; // this would be equal to red
+
+  Set property:
+    - car.numberOfDoors = 0;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Functions and Method:
+
+  Function:
+    - a set of statements that performs a task or calculates a value
+
+  Method:
+    - is a function/procedure that objects can do
+    - it has to be associated with object
+
+  For eg, a "button" object has properties and methods:
+
+    Properties:
+      - innerHTML
+      - style
+      - firstChild
+
+    Methods:
+      - click()
+      - appendChild()
+      - setAttribute()
+
+  How to call a method?
+
+    For example:
+      - car.drive();
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Selecting Elements:
+
+  document.querySelector():
+    - returns "one" item
+    -if the selected query is more than one, it would only return the first item
+
+  document.querySelectorAll():
+    - returns an "array/list" value
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+How to add/remove/toggle class using JavaScript:
+  Note: When targeting a class (in the DOM), it should have the "dot" before it (for eg; .button-shade)
+
+  For example:
+
+    .invisible {
+    visibility: hidden;
+    }
+
+  document.querySelector("button").classList.add("invisible"); - adds the styles of the "invisible" class inside the classList of the button element
+
+  document.querySelector("button").classList.remove("invisible"); - removes the "invisible" class from the classList of the button element
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+How to read this line of code:
+
+  For example:
+    document.addEventListener("keydown", function(event) {
+      makeSound(event.key);
+    })
+
+    This reads as follows:
+      - "attach this event listener" to the whole document and
+      - make it listen for a "keydown" event and when it detects those "keydown" events,
+      - run the "callback function" / "anonymous function" and pass whatever event that triggered this callback/anonymous function
+      ("The "event" parameter returns a whole bunch of data of whatever event has occured". This "event" variable can be named whatever because the
+      value that is passed will be the same (that is the event that occured in this case), but for best practice, it's often named as "e" or "event".)
+      - and then run a function that is called "makeSound" and pass in the event.key as parameter

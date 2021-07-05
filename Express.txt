@@ -1,0 +1,18 @@
+Barebones of an express server:
+
+  const express = require("express");
+
+  const port = 3000;
+  const app = express();
+
+
+  // home route
+  app.get("/", function(req, res) {
+    res.send("Hello!");
+  })
+
+  app.listen(port, function() {
+    console.log("Server is running on port 3000.");
+  });
+
+Note: Root is represented by "/"

@@ -1,0 +1,24 @@
+Command Line Techniques and Directory Navigation:
+  sudo - stands for SUPER USER DO, allows you to run programs with the security privileges of another user (by default, as the superuser)
+  mkdir + folder name - creates a folder
+  touch + file name + .extension - creates a file
+  ls or ls -a - checks the file, if with flagged with -a, it will show ALL files including hidden files
+  open / start (OPEN FOR MACOS, START FOR WINDOWS) - opens/starts a file
+  open / start + -a + application name + file name - opens/stars a file using a specific application, in windows the -a isn't needed
+  rm + file name - removes a FILE
+  rm -r - removes a DIRECTORY including ALL the files/folders it held
+  rm + * - removes ALL FILES from a directory
+  pwd - or print working directory, returns your current directory
+  cd - change directory
+  cd ~ - goes back to root directory
+  cd .. - goes back one level down
+  clear - clear the whole screen of your CLI
+  .exit - exits from the REPL
+  CTRL + C - press this TWICE to exit from the REPL
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Keyboard Command:
+  ctrl A - goes back to the START of the line of your command
+  ctrl E - goes to the END of the line of your command
+  ctrl U - CLEARS the current command in your CLI

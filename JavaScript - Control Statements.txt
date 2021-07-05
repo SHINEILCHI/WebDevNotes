@@ -1,0 +1,30 @@
+Code Structure:
+
+  While Loop:
+
+    while (something is true) {
+      // do something
+    }
+
+  For Loop:
+
+    For (var i = 1; i<2; i++;) {
+      // do something
+    }
+
+The "for loop" runs in this matter:
+  - 1st, it declares variable (var i = 1)
+  - 2nd, it checks the second statement if it's true (i<2) and if it is...
+  - 3rd, it runs the code inside the for loop and when it reaches the end of the code
+  - 4th, then it increments or it runs the last piece of code given (i++)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+When to use "for loop" or "while loop"?
+
+  - while loop is essentially use for checking a "state"
+    For example:
+      (while player 1 is alive)
+
+  - for loop on the other hand is essentially use for "iterating"
+    For example:
+      (checking a value inside an array)

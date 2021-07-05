@@ -1,0 +1,150 @@
+All about CSS:
+  - there is no website that is completely "unstyled"
+  - there is a default CSS that our browsers makes when we render our website
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tips:
+  - always close CSS line with semi-colon (;)
+  - as best practice, it's recommended to put your CSS codes inside your "styles.css" files unless certain and specific webpages are needed to be
+  design separately, by then, use "inline css" or "internal css"
+  - always check the "user agent stylesheet" when styling, it could provide useful information as it has "default values" that affects the elements
+  of your webpage and thus might explain why things are happening in your webpage
+  - "/css/styles.css" is different from "css/styles.css". The "leading slash" in front of the first example looks for the "root folder" where is the
+  second example looks for the hierarchical position/directory given to it
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Important concept in learning CSS:
+  - pretty much everything that exists on a webpage are just boxes (use pesticide chrome extension for visual)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CSS Hierarchy Rule:
+  - if an "element of a single property (for eg; body {background-color:} - body is the property whilst background-color is the element" has been
+  styled using 3 techniques namely the "inline css", the "internal css", and the "external css"  all at the same time, which would be given priority
+  by our website?
+    - if you pull up the "chrome developer tools" and pull up the "elements section", we can see in there what in these three techniques are given
+    priority.
+    - according to the "chrome developer tools", these are the "priority lane" for these three CSS techniques. 1 - "inline css", 2 - "internal css",
+    and lastly "external css".
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Three types of combining selectors:
+  1. Multiple Selectors - selector1, selector2 {} - this uses comma (,)
+  2. Hierarchical Selectors - selector1 selector2 {} - this uses space ( ) - this is read from right-to-left/child-to-parent
+  3. Combined Selectors - selector1.selector2 {} or selector1#selector2 {} - they have to all occur in the same element and is read from left-to-right
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+When writing CSS code:
+  - always put the "rules" in alphabetical order. For eg;
+    h1 {
+    color: red;
+    font-size: 20px;
+    }
+    - the above CSS code sample is in alphabetical order. This way, it'll be much easier to find a property when this 2 property becomes 20+ or so
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Use class selector for specification:
+  - class attribute allows us to differentiate all of our different HTML elements
+
+Using "tag selector":
+  - this affects all of the tag mentioned in the HTML file
+    img {
+    background-color: red;
+    }
+
+Using "class selector":
+  - this only affects the class mentioned (case sensitive)
+    .profile_picture {
+    background-color: green;
+    }
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ID vs CLASS:
+  - use ID to apply a specific style to a "single element" on your webpage
+  - use CLASS to apply the same style to a "group of related items" on your webpage
+  - an ID can only have "one" instance from a single webpage while classes can have "multiple instances"
+    For example:
+      - this is a valid CSS principle
+        CLASS:
+          <img class="bacon" src="test1.org">
+          <img class="bacon" src="test2.org">
+        ID:
+          <img id="#super-bacon" src="test3.org">
+          <img id="#super-ultimate-bacon" src="test4.org">
+    - the two different instances of the <img> element above can have the same "class" but the other instance of the <img> element that has an ID
+    property cannot have the same ID
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Pseudo Class (for eg; img:hover, img:active):
+  - html elements can have different states and we use "pseudo class" to manipulate them
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+<div>:
+  - content division element
+  - a special HTML element that allows us to divide our content on our website
+  - doesn't do anything unless you use CSS with it
+
+display: none; vs visibility: hidden;
+  - setting the "display" property as "none" will get rid of the selected element as if it didn't exist, while setting the "visibility" property as
+  "hidden" will literally just hide the selected element but will still take up its space as if it's still
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CSS Positioning Rules:
+  1 - content is everything,
+  2 - order comes from code, the default layout order is determined by your code
+  3 - children sit on parents, the children elements will always sit on the top of the parent element
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Position:
+
+  static - all html elements' position are static by default
+
+  relative - a position that's relative to where the element would have been had we followed the natural HTML flow. It doesn't affect the position of
+  anything else on the screen except the selected element
+
+  absolute - positioning the element relative to its parent, adding margin to its parent element, the selected element will be removed from the
+  natural flow of the HTML
+
+  fixed - literally fixed position, for example, when a website is scrolled down below, this element that has position set as fixed will remain to
+  whatever coordinates it has been set
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Coordinates:
+  • top
+  • bottom
+  • left
+  • right
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Sample Codes:
+
+  text-align:
+    - has to be set on the parent container
+
+  font-size (px, percentage, em, rem):
+  - in changing the font-size, we can put something like 90px but this is not a dynamic value meaning that it won't change if the browser font-size
+  settings is changed
+  - to make it dynamic, use "percentage" instead of "px"
+  - 100% is = 16px, so if we want to put 90px, 90px/16 x 100 = 562.5%
+  - another way to make the "font-size" into a "dynamic" value, use the "em"
+  - 1em = 16px or 100%, so if we want a 90px dynamic value using em, we divide 90px/16px = 5.625em
+  - em and percentage value is inherited.
+    - For eg; if we specify that the font-size of the h1 tag should have a 5.625em and we specify in the body section that font-size is 2em,
+    the overall value of the h1 tag in the body section will be 7.625em (5.625em + 2em) or the totality of the inherited values
+  - rem on the other hand or the "root em" will bypass the parent settings for the font-size.
+    - so if the body section has a 200% font-size and the h1 was set into 5.625rem, the whole website will have a 200% font-size except the h1 tag
+    that has the 5.625rem value
+
+  Float:
+    - only use float for what it's meant to which is wrapping text around a certain element
+    - don't use it for positioning!
+------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,3 @@
+HTML - is for "CONTENT ONLY"
+CSS - is for "STYLING ONLY"
+JAVASCRIPT - is for "BEHAVIOR ONLY"

@@ -1,0 +1,5 @@
+node index.js - runs the index.js via node
+npm init - this initialize npm (NOTE: you should be in the directory of your project)
+npm install + name of the module - this installs the modules from the NPM PACKAGES
+nodemon - this is a utility of node.js that automatically detects a change in our code and automatically restarts the server for us
+npm install body-parser - this allows us to pass the information that we get sent from the POST request
